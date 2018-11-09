@@ -6,11 +6,8 @@ from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.layers import concatenate
 from tensorflow.python.keras.optimizers import Adam, Adagrad
 
-import pdb
 import time
 
-
-#pdb.set_trace()
 def _data_loader(args):
 	'''
 	Loads precomputed features
@@ -85,7 +82,7 @@ if __name__=="__main__":
     parser.add_argument('--feature1_path', type=str, default='features/train_features.npy', help="Path to precomputed image features")		
     parser.add_argument('--feature2_path', type=str, default='features/feature2.npy', help="Path to gender features")		
     parser.add_argument('--labels_path', type=str, default='features/labels.npy', help="Path to labels")		
-    parser.add_argument('--save_path', type=str, default='saved_model/', help="Path to labels")		
+    parser.add_argument('--save_path', type=str, default='saved_model/', help="Path to save the model")		
     parser.add_argument('--decay_ratio', type=int, default=100, help="The ration at which the learing rate is dereased")		
     parser.add_argument('--val_start_index', type=int, default=12107, help="The index for split of train and val")		
     parser.add_argument('--lr', type=float, default='0.001', help="learning rate")			
